@@ -25,11 +25,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-        with:
-          useLockFile: false
+          cache: 'npm'
+        run: npm ci
 
       - name: 🔬 Lint
         run: npm run lint
@@ -48,11 +45,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-        with:
-          useLockFile: false
+          cache: 'npm'
+        run: npm ci
 
       - name: 🔎 Type check
         run: npm run typecheck --if-present
@@ -71,11 +65,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-        with:
-          useLockFile: false
+          cache: 'npm'
+        run: npm ci
 
       - name: ⚡ Run vitest
         run: npm run test -- --coverage
