@@ -26,6 +26,8 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
+
+      - name: 📥 Download deps
         run: npm ci
 
       - name: 🔬 Lint
@@ -46,6 +48,8 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
+
+      - name: 📥 Download deps
         run: npm ci
 
       - name: 🔎 Type check
@@ -66,6 +70,8 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
+
+      - name: 📥 Download deps
         run: npm ci
 
       - name: ⚡ Run vitest
